@@ -74,7 +74,6 @@
             width: 35%;
         }
 
-        /* Tabela de Contatos */
         .tabela-contatos {
             border: 2px solid #7cb382;
             margin-left: auto;
@@ -97,9 +96,11 @@
         a { color: #7cb382; text-decoration: none; font-weight: 500; }
         a:hover { text-decoration: underline; color: #5e8c63; }
 
-        /* Botões */
+        /* --- ESTILO PADRONIZADO DOS BOTÕES VAZADOS --- */
         .btn { 
-            display: block; 
+            display: flex; 
+            align-items: center;
+            justify-content: center;
             text-align: center;
             padding: 12px 25px; 
             border-radius: 10px; 
@@ -107,28 +108,47 @@
             font-weight: bold;
             transition: 0.3s;
             text-decoration: none;
-            width: fit-content; 
-            min-width: 220px; 
+            width: 280px; /* Largura idêntica para todos */
+            max-width: 100%;
             font-size: 1rem;
-            border: none;
+            background: transparent; /* Fundo vazado */
+            border-width: 2px;
+            border-style: solid;
         }
 
-        .btn-cv { background: #7cb382; color: #fff; }
-        .btn-cv:hover { background: #5e8c63; color: #fff; text-decoration: none; }
-
-        .btn-blog { background: #5da9e9; color: #fff; }
-        .btn-blog:hover { background: #3a8cd1; color: #fff; text-decoration: none; }
-
-        .btn-youtube { 
-            background: #FF0000; 
+        /* Botão Verde (Currículo) */
+        .btn-cv { 
+            border-color: #7cb382; 
+            color: #7cb382 !important; 
+        }
+        .btn-cv:hover { 
+            background: #7cb382; 
             color: #fff !important; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        }
+
+        /* Botão Azul (Blog) */
+        .btn-blog { 
+            border-color: #5da9e9; 
+            color: #5da9e9 !important; 
+        }
+        .btn-blog:hover { 
+            background: #5da9e9; 
+            color: #fff !important; 
+        }
+
+        /* Botão Vermelho (YouTube) */
+        .btn-youtube { 
+            border-color: #FF0000; 
+            color: #FF0000 !important; 
             gap: 10px;
         }
-        .btn-youtube:hover { background: #cc0000; text-decoration: none; }
-        .btn-youtube img { width: 22px; height: auto; }
+        .btn-youtube:hover { 
+            background: #FF0000; 
+            color: #fff !important; 
+        }
+        
+        .btn-youtube img { width: 22px; height: auto; transition: 0.3s; }
+        .btn-youtube:hover img { filter: brightness(0) invert(1); }
 
         /* Responsividade */
         @media (max-width: 480px) {
@@ -136,7 +156,7 @@
             .container { padding: 20px; }
             h1 { font-size: 1.5rem; }
             .tabela-titulos th, .tabela-titulos td, .tabela-contatos td { padding: 8px 5px; font-size: 0.85rem; }
-            .btn { min-width: 100%; }
+            .btn { width: 100%; }
         }
     </style>
 </head>
