@@ -1,3 +1,16 @@
+Com certeza, Felipe. Fiz os ajustes solicitados no código:
+
+    Blog: O título agora é apenas um texto sublinhado (sem link).
+
+    Botão do Blog: Adicionei o botão azul claro, centralizado e com as mesmas dimensões/estilo do botão de currículo.
+
+    Currículo: Alterei o texto de descrição conforme solicitado.
+
+    CSS: Adicionei uma classe .btn-blog para gerenciar a cor azul claro sem afetar os outros botões.
+
+Aqui está o código atualizado:
+HTML
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -101,19 +114,24 @@
         .btn { 
             display: block; 
             text-align: center;
-            padding: 12px 25px; /* Aumentado para melhor visualização */
+            padding: 12px 25px; 
             border-radius: 10px; 
             margin: 20px auto; 
             font-weight: bold;
             transition: 0.3s;
             text-decoration: none;
             width: fit-content; 
-            min-width: 220px; /* Largura mínima para destaque */
+            min-width: 220px; 
             font-size: 1rem;
+            border: none;
+            cursor: pointer;
         }
 
         .btn-cv { background: #7cb382; color: #fff; }
         .btn-cv:hover { background: #5e8c63; color: #fff; text-decoration: none; }
+
+        .btn-blog { background: #5da9e9; color: #fff; }
+        .btn-blog:hover { background: #3a8cd1; color: #fff; text-decoration: none; }
 
         .btn-youtube { 
             background: #FF0000; 
@@ -131,6 +149,15 @@
             padding: 15px; 
             border-radius: 10px; 
             border-left: 4px solid #7cb382;
+        }
+
+        .titulo-sublinhado {
+            text-decoration: underline;
+            color: #2d4a31;
+            font-size: 1.17rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
         }
 
         /* Responsividade */
@@ -196,15 +223,16 @@
 
     <section id="curriculo">
         <h2>Currículo</h2>
-        <p style="text-align: center;">Resumo das experiências acadêmicas e profissionais detalhadas.</p>
+        <p style="text-align: center;">Detalhamento das experiências acadêmicas e profissionais</p>
         <a href="#" class="btn btn-cv">Visualizar Currículo (PDF)</a>
     </section>
 
     <section id="blog">
         <h2>Blog</h2>
         <div class="blog-post">
-            <h3><a href="https://felipebrasilblog.github.io/" target="_blank">Meu hobby de escrita criativa</a></h3>
+            <span class="titulo-sublinhado">Meu hobby de escrita criativa</span>
             <p>Confira meus textos e reflexões sobre a vida, trabalho, diversão, literatura, hobbies e o processo de criação textual.</p>
+            <a href="https://felipebrasilblog.github.io/" target="_blank" class="btn btn-blog">Blog</a>
         </div>
     </section>
 
