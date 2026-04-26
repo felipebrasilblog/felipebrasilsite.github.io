@@ -52,10 +52,10 @@
             padding-bottom: 5px;
         }
 
-        p, li { font-size: 1rem; line-height: 1.6; color: #444; }
+        p, td { font-size: 1rem; line-height: 1.6; color: #444; }
 
-        /* Tabela de Titulações */
-        .tabela-titulos {
+        /* Tabelas */
+        .tabela-titulos, .tabela-contatos {
             width: 100%;
             border-collapse: collapse;
             margin: 15px 0;
@@ -74,29 +74,42 @@
             width: 35%;
         }
 
+        /* Tabela de Contatos */
+        .tabela-contatos {
+            border: 2px solid #7cb382;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 95%;
+        }
+
+        .tabela-contatos td {
+            padding: 12px;
+            border: 1px solid transparent;
+            text-align: left;
+        }
+
         .status-andamento {
             font-style: italic;
             color: #888;
             font-size: 0.85rem;
         }
 
-        /* Contatos */
-        .contatos ul { list-style: none; }
-        .contatos li { margin-bottom: 12px; word-break: break-all; }
-        
         a { color: #7cb382; text-decoration: none; font-weight: 500; }
         a:hover { text-decoration: underline; color: #5e8c63; }
 
-        /* Botões */
+        /* Botões Ajustados */
         .btn { 
             display: block; 
             text-align: center;
-            padding: 15px; 
+            padding: 12px 25px; /* Aumentado para melhor visualização */
             border-radius: 10px; 
-            margin-top: 15px; 
+            margin: 20px auto; 
             font-weight: bold;
             transition: 0.3s;
             text-decoration: none;
+            width: fit-content; 
+            min-width: 220px; /* Largura mínima para destaque */
+            font-size: 1rem;
         }
 
         .btn-cv { background: #7cb382; color: #fff; }
@@ -111,7 +124,7 @@
             gap: 10px;
         }
         .btn-youtube:hover { background: #cc0000; text-decoration: none; }
-        .btn-youtube img { width: 24px; height: auto; }
+        .btn-youtube img { width: 22px; height: auto; }
 
         .blog-post { 
             background: #f9fbf9; 
@@ -125,7 +138,8 @@
             body { padding: 10px; }
             .container { padding: 20px; }
             h1 { font-size: 1.5rem; }
-            .tabela-titulos th, .tabela-titulos td { padding: 8px 5px; font-size: 0.85rem; }
+            .tabela-titulos th, .tabela-titulos td, .tabela-contatos td { padding: 8px 5px; font-size: 0.85rem; }
+            .btn { min-width: 100%; }
         }
     </style>
 </head>
@@ -156,7 +170,7 @@
                 <td>Gestão Escolar e Educação Especial</td>
             </tr>
             <tr>
-                <th>Especializações em andamento</th>
+                <th>Especializações</th>
                 <td>Transtorno do Espectro Autista e Psicopedagogia <span class="status-andamento">(Em andamento)</span></td>
             </tr>
         </table>
@@ -164,17 +178,26 @@
 
     <section id="contatos">
         <h2>Contatos</h2>
-        <ul class="contatos">
-            <li><strong>Email Pessoal:</strong> <a href="mailto:felipefelicio@gmail.com">felipefelicio@gmail.com</a></li>
-            <li><strong>Email Institucional:</strong> <a href="mailto:felicio.felipe@escola.pr.gov.br">felicio.felipe@escola.pr.gov.br</a></li>
-            <li><strong>WhatsApp:</strong> <a href="https://wa.me/5541998816816" target="_blank">+55 (41) 998816816</a></li>
-        </ul>
+        <table class="tabela-contatos">
+            <tr>
+                <td><strong>Email Pessoal:</strong></td>
+                <td><a href="mailto:felipefelicio@gmail.com">felipefelicio@gmail.com</a></td>
+            </tr>
+            <tr>
+                <td><strong>Email Institucional:</strong></td>
+                <td><a href="mailto:felicio.felipe@escola.pr.gov.br">felicio.felipe@escola.pr.gov.br</a></td>
+            </tr>
+            <tr>
+                <td><strong>WhatsApp:</strong></td>
+                <td><a href="https://wa.me/5541998816816" target="_blank">+55 (41) 998816816</a></td>
+            </tr>
+        </table>
     </section>
 
     <section id="curriculo">
         <h2>Currículo</h2>
-        <p>Resumo das experiências acadêmicas e profissionais detalhadas.</p>
-        <a href="#" class="btn btn-cv">Visualizar Currículo Completo (PDF)</a>
+        <p style="text-align: center;">Resumo das experiências acadêmicas e profissionais detalhadas.</p>
+        <a href="#" class="btn btn-cv">Visualizar Currículo (PDF)</a>
     </section>
 
     <section id="blog">
@@ -187,7 +210,7 @@
 
     <section id="youtube">
         <h2>YouTube</h2>
-        <p>Acompanhe meus conteúdos em vídeo e tutoriais diretamente no meu canal oficial.</p>
+        <p style="text-align: center;">Acompanhe meus conteúdos em vídeo e tutoriais.</p>
         <a href="https://www.youtube.com/@felipe.b.felicio" target="_blank" class="btn btn-youtube">
             <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="Ícone YouTube">
             Inscrever-se no Canal
